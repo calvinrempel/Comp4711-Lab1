@@ -60,11 +60,11 @@ class Student {
      * @return string a text representation of the students' information.
      */
     function toString() {
-        $result = $this->first_name . ' ' . $this->surname;
+        $result = '<span>'. $this->first_name . ' ' . $this->surname . '</span>';
         $result .= ' ('.$this->average().")\n";
         
         foreach($this->emails as $which=>$what) {
-            $result .= $which . ': '. $what. "\n";
+            $result .= '<span>' . $which . ':</span> '. $what. "\n";
         }
         $result .= "\n";
         
