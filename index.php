@@ -8,8 +8,10 @@
         <?php
         include 'Student.php';
         
+        // Create a List of Students to be printed.
         $students = array();
         
+        // Add a Test Student to the Student List
         $first = new Student();
         $first->surname = "Doe";
         $first->first_name = "John";
@@ -20,6 +22,7 @@
         $first->add_grade(55);
         $students['j123'] = $first;
         
+        // Add a Second Test Student to the Student List
         $second = new Student();
         $second->surname = "Einstein";
         $second->first_name = "Albert";
@@ -31,8 +34,20 @@
         $second->add_grade(50);
         $students['a456'] = $second;
         
+        // Add Myself to the Student List
+        $me = new Student();
+        $me->surname = "Rempel";
+        $me->first_name = "Calvin";
+        $me->add_email( "school", "not.my.real.account@gmail.com" );
+        $me->add_grade( 100 );
+        $me->add_grade( 95 );
+        $me->add_grade( 90 );
+        $students[ 'c789' ] = $me;
+        
+        // Sort the Student List by Array Key
         ksort( $students );
         
+        // Print all Students in the Student List
         foreach ( $students as $student ) {
             echo $student->toString();
         }
