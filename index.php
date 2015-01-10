@@ -3,8 +3,42 @@
     <head>
         <meta charset="utf-8">
         <title>Comp4711 Lab1</title>
+        
+        <style>
+            /* Format the Student title. */
+            h1 {
+                color: #444444;
+                text-decoration: underline;
+                margin: 0.25em  0.5em;
+            }
+            
+            /* Format the base Student Info section. */
+            pre {
+                font-size: 1.25em;
+                margin: 0;
+                padding: 0.5em 2em;
+                background: #efefff;
+            }
+            
+            /* Make Student Info section labels bold. */
+            pre span {
+                font-weight: bold;
+            }
+            
+            /* Alternate between background colors on Student Info sections. */
+            pre:nth-child( odd ) {
+                background: #dfdfff;
+            }
+            
+            /* Darken a Student Info section on mouseover. */
+            pre:hover {
+                background: #333333;
+                color: #eeeeee;
+            }
+        </style>
     </head>
     <body>
+        <h1>Students</h1>
         <?php
         include 'Student.php';
         
